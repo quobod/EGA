@@ -52,6 +52,8 @@ body {
     padding: 5px;
     margin: 0;
     font-family: cursive, georgia, arialnarrow;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .row {
@@ -87,6 +89,15 @@ body {
     font-weight: bolder;
     color: rgb(25,25,55);
     letter-spacing:0;
+}
+
+.layout {
+    max-height: 85vh;
+}
+
+.copyright {
+    font-size: 0.8em;
+    font-family: arialnarrow;
 }
 
 

@@ -57,7 +57,7 @@ const initApp = () => {
 
         // Add a para element to footer
         let p = createElement('p');
-        p.innerHTML = `${url.url} Queueb &copy;2018 `;
+        p.innerHTML = `${url.url} <span class="copyright">Queueb &copy;2018</span>`;
 
         // Add para to the footer
         appendElement(footer, p);
