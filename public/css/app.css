@@ -1,7 +1,7 @@
 /* Default body */
 body {
-    margin: 20px;
-    padding: 0;
+    margin: 0px;
+    padding: 20px;
 }
 
 /* Parent elements */
@@ -72,18 +72,13 @@ body {
 
 /* Element decoration */
 .border {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "header header header header"
-        "main main main main"
-        "footer footer footer footer";    
+        ". . header . . "
+        ". . main . ."
+        ". . footer . .";    
     border: solid 1pt rgb(100, 100, 110);
-}
-
-.imgs > b{
-    padding: 10px;
-    margin: 0;
 }
 
 .menu-header {
