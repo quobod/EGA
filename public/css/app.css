@@ -1,0 +1,136 @@
+/* Default body */
+body {
+    margin: 20px;
+    padding: 0;
+}
+
+/* Parent elements */
+.container {
+    display: grid;
+    max-height:80vh;
+    max-width: 90vw;
+    margin: auto;
+}
+
+.header {
+    margin: 1%;
+    grid-area: header;
+    border: solid 1pt darkred;
+}
+
+.header h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+    position: relative;
+    padding: 5px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.body {
+    margin: 1%;
+    grid-area: body;
+    border: solid 1pt darkgreen;
+}
+
+.body * {
+    padding: 5px;
+    font-family: cursive, georgia, arialnarrow;
+}
+
+.footer {
+    margin: 1%;
+    grid-area: footer;
+    border: solid 1pt darkblue;
+}
+
+.footer p {
+    padding: 5px;
+    margin: 0;
+    font-family: cursive, georgia, arialnarrow;
+}
+
+.row {
+    display: grid;
+    margin:auto;
+    margin:25px;
+    border: solid 1pt darkgray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px darkgray;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    grid-template-areas:
+        "header header header header"
+        "body body body body"
+        "footer footer footer footer";    
+}
+
+/* Element decoration */
+.border {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";    
+    border: solid 1pt rgb(100, 100, 110);
+}
+
+.imgs > b{
+    padding: 10px;
+    margin: 0;
+}
+
+.menu-header {
+    font-family: cursive;
+    font-size:1em;
+    font-weight: bolder;
+    color: rgb(25,25,55);
+    letter-spacing:0;
+}
+
+
+/* Elements */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: inline-block; 
+    margin:0;
+}
+
+a {
+    display: block;
+    padding: 6px;
+    margin:5px;
+    text-decoration: none;
+    color: $aDefault;
+    font-weight: bold;
+}
+
+
+/* Element layout over-flow */
+.v-scroll {
+	overflow:scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+.invisible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
