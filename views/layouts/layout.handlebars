@@ -13,14 +13,9 @@
             <title>{{#if title}} {{{title}}} {{else}} Project Demo {{/if}}</title>
 	</head> 
 	<body>	
-            {{> header}}
-        
+            {{> header}}        
             <div class="layout v-scroll">                
-                    {{#if pageHeader}}
-                        <h3 class="header">{{{pageHeader}}} </h3>
-                    {{/if}}
-               
-                    {{{body}}}
+                {{{body}}}
             </div>		
         </body>	
         <!-- <script src="js/vendor/foundation.js"></script> -->
