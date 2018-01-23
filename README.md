@@ -12,9 +12,9 @@
 
 # Run
  npm start
-
+```
 <p>The package script uses nodemon to run the app</p>
-
+```
 # Nodemon Installation
 npm install --global nodemon
 
