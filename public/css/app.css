@@ -123,6 +123,7 @@ body {
 .footer {
     max-width:90%;
     margin: 1%;
+    padding: 0;
     grid-area: footer;
     border: solid 1pt darkblue;
     word-wrap: break-word;
@@ -130,7 +131,9 @@ body {
 
 .footer p {
     margin: 0;
-    padding: 5px;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
     font-family: cursive, georgia, arialnarrow;
     font-size: 1em;
     font-weight: bold;
@@ -143,6 +146,8 @@ li.menu-header {
     font-weight: bold;
     padding: 0;
     margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 
