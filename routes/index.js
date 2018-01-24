@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const log = require('../custom_modules/log');
+const csrf = require('csurf');
+const csrfProtection = csrf();
 
 // Home view
 router.get('/', (req, res) => {
@@ -21,9 +23,9 @@ router.get('/contact', (req, res) => {
 });
 
 // Search view
-router.get('/search', (req, res) => {
+router.get('/search', csrfProtection, (req, res) => {
     
-    res.render('search', {title:'Search'});
+    res.render('search', {title:'Search', csrfToken: req.csrfToken()});
 });
 
 module.exports = router;
