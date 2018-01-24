@@ -71,4 +71,5 @@ const initApp = () => {
         appendElement(parent, footer);
 
     });
+
 }; 
