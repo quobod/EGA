@@ -28,11 +28,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+
+
 /* Default body */
 body {
     margin: 0px;
     padding: 20px;
 }
+
+
+
+
 
 /* Parent elements */
 .container {
@@ -42,6 +49,28 @@ body {
     margin: auto;
 }
 
+.row {
+    display: grid;
+    margin:auto;
+    margin:25px;
+    border: solid 1pt darkgray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px darkgray;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    grid-template-areas:
+        "header header header header"
+        "main-body main-body main-body main-body"
+        "footer footer footer footer";    
+}
+
+
+
+
+
+
+/* Specific elements */
 .header {
     margin: 1%;
     grid-area: header;
@@ -63,7 +92,7 @@ body {
 
 .body {
     margin: 1%;
-    grid-area: body;
+    grid-area: main-body;
     border: solid 1pt darkgreen;
 }
 
@@ -73,34 +102,25 @@ body {
 }
 
 .footer {
+    max-width:50vw;
     margin: 1%;
     grid-area: footer;
     border: solid 1pt darkblue;
 }
 
 .footer p {
-    padding: 5px;
     margin: 0;
+    padding: 15px;
     font-family: cursive, georgia, arialnarrow;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
+    text-over-flow: break;
 }
 
-.row {
-    display: grid;
-    margin:auto;
-    margin:25px;
-    border: solid 1pt darkgray;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px darkgray;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    justify-items: center;
-    grid-template-areas:
-        "header header header header"
-        "body body body body"
-        "footer footer footer footer";    
-}
+
+
+
+
 
 /* Element decoration */
 .border {
@@ -122,7 +142,7 @@ body {
 }
 
 .layout {
-    max-height: 88vh;
+    max-height: 80vh;
 }
 
 .copyright {
@@ -130,6 +150,29 @@ body {
     font-family: arialnarrow;
     letter-spacing:0em;
 }
+
+
+
+
+
+
+/* Animation */
+/* Code for old Chrome, Safari and Opera */
+@-webkit-keyframes mymove {
+    from {background-color: red;}
+    to {background-color: blue;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {background-color: red;}
+    to {background-color: blue;}
+}
+
+
+
+
+
 
 /* Element layout over-flow */
 .v-scroll {

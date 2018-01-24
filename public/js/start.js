@@ -57,6 +57,7 @@ const initApp = () => {
 
         // Add a para element to footer
         let p = createElement('p');
+        addAttribute(p, 'class', 'v-scroll');
         p.innerHTML = `${url.url} <span class="copyright">Queueb &copy;2018</span>`;
 
         // Add para to the footer
