@@ -31,11 +31,20 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
+
+
+
 /* Default body */
 body {
     margin: 0px;
     padding: 20px;
 }
+
+
+
+
+
 
 
 
@@ -64,6 +73,10 @@ body {
         "main-body main-body main-body main-body"
         "footer footer footer footer";    
 }
+
+
+
+
 
 
 
@@ -123,6 +136,9 @@ body {
 
 
 
+
+
+
 /* Element decoration */
 .border {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -152,6 +168,15 @@ body {
     letter-spacing:0em;
 }
 
+.copyright:hover {
+    animation-name: grow;
+    animation-duration: 4s;
+   animation-fill-mode: backwards;
+}
+
+
+
+
 
 
 
@@ -169,6 +194,26 @@ body {
     from {background-color: red;}
     to {background-color: blue;}
 }
+
+
+/* Code for old Chrome, Safari and Opera */
+@-webkit-keyframes grow {
+    0% {font-size: 0.8em;}
+    25% {font-size: 1em;}
+    50% {font-size: 1.4}
+    100% {font-size: 1.8em;}
+}
+
+/* Standard syntax */
+@keyframes grow {
+    0% {font-size: 0.8em;}
+    25% {font-size: 1em;}
+    50% {font-size: 1.4}
+    100% {font-size: 1.8em;}
+}
+
+
+
 
 
 
