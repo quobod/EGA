@@ -1,19 +1,23 @@
 /* Elements */
+
+/* Menu */
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    border: solid 1pt darkorange;
 }
 
 li {
     display: inline-block; 
     margin:0;
+    padding: 0;
 }
 
 a {
     display: block;
-    padding: 6px;
-    margin:5px;
+    padding: 10px;
+    margin:0px;
     text-decoration: none;
     color: $aDefault;
     font-weight: bold;
@@ -131,6 +135,13 @@ body {
     /* text-overflow: ellipsis; */
 }
 
+li.menu-header {
+    font-family: cursive, georgian, garamond;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
 
 
 
