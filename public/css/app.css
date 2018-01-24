@@ -102,19 +102,20 @@ body {
 }
 
 .footer {
-    max-width:50vw;
+    max-width:90%;
     margin: 1%;
     grid-area: footer;
     border: solid 1pt darkblue;
+    word-wrap: break-word;
 }
 
 .footer p {
     margin: 0;
-    padding: 15px;
+    padding: 5px;
     font-family: cursive, georgia, arialnarrow;
     font-size: 1em;
     font-weight: bold;
-    text-over-flow: break;
+    /* text-overflow: ellipsis; */
 }
 
 
