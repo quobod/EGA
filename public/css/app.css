@@ -6,6 +6,8 @@ ul {
     padding: 0;
     list-style: none;
     border: solid 1pt darkorange;
+    background: rgb(190, 190, 185);
+    z-index: 0;
 }
 
 li {
@@ -21,7 +23,7 @@ a {
     margin-left: 15px;
     margin-right: 15px;
     text-decoration: none;
-    color: $aDefault;
+    color: rgb(110, 110, 0);
     font-weight: bold;
 }
 

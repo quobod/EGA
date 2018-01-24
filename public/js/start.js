@@ -62,8 +62,7 @@ const initApp = () => {
 
         // Add para to the footer
         appendElement(footer, p);
-        
-        
+                
         // Add proper attributes
         addAttribute(footer, 'class', 'footer');
        
