@@ -28,4 +28,13 @@ router.get('/search', csrfProtection, (req, res) => {
     res.render('search', {title:'Search', csrfToken: req.csrfToken()});
 });
 
+// Find route
+router.post('/find', csrfProtection, (req, res) => {
+    const value = req.body.keyterm;
+    log(`Searched ${value}`);
+
+    // res.render('search', {title:'Found', csrfToken: req.csrfToken()});
+    res.status(200);
+});
+
 module.exports = router;
