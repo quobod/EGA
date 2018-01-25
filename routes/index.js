@@ -29,12 +29,12 @@ router.get('/search', csrfProtection, (req, res) => {
 });
 
 // Find route
-router.post('/find', csrfProtection, (req, res) => {
+router.post('/find' , (req, res) => {
     const value = req.body.keyterm;
+    
     log(`Searched ${value}`);
 
-    // res.render('search', {title:'Found', csrfToken: req.csrfToken()});
-    res.status(200);
+    res.sendStatus(200);
 });
 
 module.exports = router;
