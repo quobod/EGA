@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
     margin: 0px;
     padding: 0px;
+    color: rgb(10,10,8);
 }
 
 
@@ -68,8 +69,12 @@ body {
 
 .form {
     display: grid;
-    margin: 0px;
-    padding: 5px;
+    margin: 25px;
+    padding: 25px;
+    background-color: rgb(235,235,190);
+    box-shadow: 5px 5px 8px;
+    border-radius: 5px;
+    /* background: darkgray; */
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-column-gap: 0px;
@@ -80,29 +85,40 @@ body {
 }
 
 .form input {
-    padding: 0;
+    padding: 5px;
     margin: 0;
-    width: 50vw;
-    border: solid 1px darkgray;
-    border-radius: 0px;
+    border: solid 1.2pt darkgray;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .form i {
+    padding: 0px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 1em;
     margin: 0px;
     line-height: 2.6;
     background: darkgray;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
     /* border: solid 1pt darkcyan;     */
 }
 
 .form-parent {
     display: grid;
     margin: 20px;
-    border: solid 1pt black;
+    padding: 0px;
+    border: solid 1pt darkred;
+    border-radius: 3px;
     grid-template-columns: auto;
     grid-template-rows: auto;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
     justify-items: left;
     grid-template-areas:
         "icon input";    
