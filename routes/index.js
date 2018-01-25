@@ -25,7 +25,7 @@ router.get('/contact', (req, res) => {
 // Search view
 router.get('/search', csrfProtection, (req, res) => {
     
-    res.render('search', {title:'Search', csrfToken: req.csrfToken()});
+    res.render('search', {title:'Search', csrfToken: req.csrfToken(), submitted: false});
 });
 
 // Find route
