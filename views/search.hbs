@@ -1,14 +1,7 @@
-{{# if submitted }}
-    <h3 class="header">{{status}}</h3>
-{{else}}
-
 <div class="container">
     <form class="form" method="POST" action="/find">
         <label class="label"><i class="fa fa-search icon"></i></label>
         <input class="input" type="text" name="keyterm" placeholder="Search">
-        <input class="submit-button button" type="submit" value="Search">
-        <input class="input" type="hidden" value="{{ csrfToken }}" name="_csrf"
+        <input class="input" type="hidden" value="{{ csrfToken }}" name="_csrf">
     </form>
 </div>
-
-{{/if}}

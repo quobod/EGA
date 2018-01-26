@@ -1,0 +1,41 @@
+        // Check for the dash "-"
+        if (arg.match('-')) {
+            let dashSplit = arg.split('-');
+            for (let d = 0; d < dashSplit.length; d++) {
+                let dashItem = dashSplit[d];
+
+                if (d < (dashSplit - 1)) {
+                    newWord += dashItem + ' ';
+                } else {
+                    newWord += dashItem;
+                }
+            }
+        }
+
+        // Check for single space
+        if (arg.match(' ')) {
+            let spaceSplit = arg.split(' ');
+            for (let s = 0; s < spaceSplit.length; s++) {
+                let spaceItem  = spaceSplit[s];
+    
+                if (s < (spaceSplit.length - 1)) {
+                    newWord += spaceItem + ' ';
+                } else {
+                    newWord += spaceItem;
+                }
+                
+        }
+
+        // Check for the underscore
+        if (arg.match('_')) {
+            let underscoreSplit = arg.split('_');
+            for (let u = 0; u < underscoreSplit; u++) {
+                let underscoreItem = underscoreSplit[u];
+                
+                if (u < (underscoreItem.length - 1)) {
+                    newWord += underscoreItem + ' ';
+                } else {
+                    newWord += underscoreItem;
+                }
+            }
+        }

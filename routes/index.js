@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const log = require('../custom_modules/log');
 const csrf = require('csurf');
-const csrfProtection = csrf();
+let csrfProtection = csrf();
+router.use(csrfProtection);
 
 // Home view
 router.get('/', (req, res) => {
     
-    res.render('index', {title:'EGA Project'});
+    res.render('index', {title:'EGA Project', submitted: false});
 });
 
 // About view
@@ -23,18 +24,17 @@ router.get('/contact', (req, res) => {
 });
 
 // Search view
-router.get('/search', csrfProtection, (req, res) => {
+router.get('/search', (req, res) => {
     
-    res.render('search', {title:'Search', csrfToken: req.csrfToken(), submitted: false});
+    res.render('search', { title:'Search', csrfToken: req.csrfToken });
 });
 
 // Find route
-router.post('/find' , (req, res) => {
+router.post('/find',  (req, res) => {
     const value = req.body.keyterm;
     
     log(`Searched ${value}`);
-
-    res.sendStatus(200);
+    res.render('index', { title: 'Searched', submitted: true, status: value });
 });
 
 module.exports = router;
