@@ -9,7 +9,7 @@ router.use(csrfProtection);
 // Home view
 router.get('/', (req, res) => {
     
-    res.render('index', {title:'EGA Project', submitted: false});
+    res.render('index', {title:'EGA Project'});
 });
 
 // About view
@@ -32,7 +32,7 @@ router.get('/contact', (req, res) => {
 // Search view
 router.get('/search', (req, res) => {
     
-    res.render('search', { title:'Search', csrfToken: req.csrfToken });
+    res.render('search', { title:'Search', csrfToken: req.csrfToken, submitted: false });
 });
 
 // Find route
@@ -40,7 +40,7 @@ router.post('/find',  (req, res) => {
     const value = req.body.keyterm;
     
     log(`Searched ${value}`);
-    res.render('index', { title: 'Searched', submitted: true, status: value });
+    res.render('search', { title: 'Searched', submitted: true, status: value });
 });
 
 module.exports = router;
