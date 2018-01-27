@@ -17,6 +17,14 @@ const validArg = (arg) => {
     return null !== arg && undefined !== arg && (typeof arg === 'string' && arg.length > 0);
 };
 
+const reverse = (arg) => {
+    let reversed = '';
+   for (let i = arg.length; i > -1; i--) {
+        reversed += arg.charAt(i);
+    }
+    return reversed;
+};
+
 const capitalizeFirstCharacter = (arg, character = null) => {
     if (null === character) {
         return arg.substring(0, 1).toUpperCase();
@@ -70,6 +78,11 @@ module.exports = {
     'cfc': (function(){
         return function(arg) {
             return cfc(arg);
+        }
+    })(),
+    'reverse': (function(){
+        return function(arg) {
+            return reverse(arg);
         }
     })()
 }
