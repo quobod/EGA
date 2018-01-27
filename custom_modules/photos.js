@@ -13682,4 +13682,4 @@ const links = [
 
 ];
 
-module.export = links;
+module.exports = links;

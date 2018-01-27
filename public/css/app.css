@@ -60,6 +60,26 @@ body {
 
 
 /* Parent elements */
+.photo {
+    padding: 0px;
+    margin: auto;
+    margin: 25px;
+    display: grid;
+    max-height: 90vh;
+    max-width: 100vw;
+    border: solid 1pt black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:auto;
+    grid-row-gap: 1px;
+    grid-column-gap: 1px;
+    justify-items: left;
+    grid-template-areas:
+        "title title title"
+        "image image image";
+}
+
 .container {
     display: grid;
     max-height:80vh;
@@ -213,7 +233,17 @@ li.menu-header {
     padding-right: 5px;
 }
 
+.title {
+    font-size: 1em;
+    grid-area: title;
+    padding: 15px;
+    font-family: cursive, georgia, georgian, arial;
+}
 
+.img {    
+    grid-area: image;
+    padding: 15px;
+}
 
 
 

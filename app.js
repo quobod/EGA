@@ -51,7 +51,7 @@ app.use(function(err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
-    res.render('error', {err:res.locals.error, msg:res.locals.message, sta:res.status});
+    res.render('error', {title: 'Exception', err:res.locals.error, msg:res.locals.message, sta:res.status});
 });
 
 // Set port
