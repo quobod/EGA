@@ -48,7 +48,7 @@ describe(chalk.green('Underscore function test'), () => {
 });
 
 // Testing the cfc function
-describe(chalk.green('Underscore function test'), () => {
+describe(chalk.green('Cfc function test'), () => {
     describe(chalk.yellow('Testing 5 strings for with underscore, single space and dashes'), () => {
         it('should return all strings with first character of each word in caps', () => {
             const args = ['to-prevent-this', 'in_prepared_testimony_in', 'with-both-your-counter-parts', 'are_there_no_go_zones', 'has not', 'surely_I_saw'];
