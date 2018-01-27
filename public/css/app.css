@@ -61,23 +61,22 @@ body {
 
 /* Parent elements */
 .photo {
-    padding: 0px;
-    margin: auto;
-    margin: 25px;
+    padding: 5px;
+    margin: 0px;
     display: grid;
-    max-height: 90vh;
-    max-width: 100vw;
     border: solid 1pt black;
     border-radius: 10px;
     box-shadow: 5px 5px 10px black;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows:auto;
-    grid-row-gap: 1px;
-    grid-column-gap: 1px;
-    justify-items: left;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    justify-items: center;
     grid-template-areas:
-        "title title title"
-        "image image image";
+        "title title title ."
+        " . . . ."
+        ". . . ."
+        "desc desc desc desc";
 }
 
 .container {
@@ -236,13 +235,15 @@ li.menu-header {
 .title {
     font-size: 1em;
     grid-area: title;
-    padding: 15px;
+    padding: 25px;
     font-family: cursive, georgia, georgian, arial;
+    word-wrap: break-word;
 }
 
-.img {    
-    grid-area: image;
+.description {
+    grid-area: desc;
     padding: 15px;
+    margin: 10px;
 }
 
 

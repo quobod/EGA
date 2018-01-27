@@ -1,8 +1,7 @@
-<div id="output" class="photo v-scroll">
+<div id="output" class="row v-scroll">
     {{#each photos}}
-        <div class="border" style="color: black; margin:4px; border-radius: 9px;"> 
-            <h2 class="title">{{this.title}}</h2>
-            <img class="img" src="{{this.thumbnailUrl}}">
+        <div class="border photo" style="background-image: url({{this.url}}); color: black; margin:4px; border-radius: 9px;"> 
+            <h2 class="title"><a class="anchor" href={{this.url}} target="_blank">{{this.url}}</a></h2>
         </div>
     {{/each}}
 </div>
