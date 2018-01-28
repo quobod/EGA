@@ -3,7 +3,7 @@
      *  @return Random member*/
     const randomMember = (arg) => {
         return arg[~~(Math.random() * (arg.length-1))];
-    }
+    };
 
     /*  Returns a random number within given range. Expecting two numbers
      *  @param min Number or String number
@@ -19,7 +19,7 @@
         }
 
         return ~~(Math.random() * (max-min)) + min;
-    }
+    };
 
 module.exports = {
     'member': (function(){
