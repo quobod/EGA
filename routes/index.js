@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 // About view
 router.get('/about', (req, res) => {
     let imgs = [];
-    for (let i = 0; i < 13; i++) {
+    for (let i = 0; i < 24; i++) {
         // let photo = photos[i];
         imgs.push(random.member(photos));
     }
