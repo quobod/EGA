@@ -4,7 +4,7 @@ const log = require('../custom_modules/log');
 const random = require('../custom_modules/random');
 const photos = require('../custom_modules/photos');
 const csrf = require('csurf');
-let csrfProtection = csrf();
+const csrfProtection = csrf();
 router.use(csrfProtection);
 
 // Home view
@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
 
 // About view
 router.get('/about', (req, res) => {
-    let imgs = [];
+    const imgs = [];
     for (let i = 0; i < 24; i++) {
         // let photo = photos[i];
         imgs.push(random.member(photos));
