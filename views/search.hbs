@@ -4,11 +4,11 @@
     
 {{else}}
 
-    <div class="container">
+    <div class="row">
         <form class="form" method="POST" action="/find">
-            <label class="label"><i class="fa fa-search icon"></i></label>
-            <input class="input" type="text" name="keyterm" placeholder="Search">
-            <input class="input" type="hidden" value="{{ csrfToken }}" name="_csrf">
+            <label class="title"><i class="fa fa-search icon"></i></label>
+            <input class="field" type="text" name="keyterm" placeholder="Search">
+            <input class="" type="hidden" value="{{ csrfToken }}" name="_csrf">
         </form>
     </div>
 

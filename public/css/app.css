@@ -1,24 +1,49 @@
-/* Elements */
+/* All Elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Default body */
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #485e74
+    background: #92bde7;
+    font-family: cursive 'Segoe UI', Tahoma, Genveva, Georgia, sans-serif;
+}
+
+
+
+
+
+
+
+
+
 
 /* Menu */
-ul {
+.menu {
+    
+    border: solid 1pt darkorange;
+    background: rgb(190, 190, 185);    
+}
+
+.menu ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    border: solid 1pt darkorange;
-    background: rgb(190, 190, 185);
     z-index: 0;
 }
 
-li {
+.menu li {
     display: inline-block; 
     margin:0;
     padding: 0;
 }
 
-a {
+.menu a {
     display: block;
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
     margin-left: 15px;
     margin-right: 15px;
@@ -27,9 +52,31 @@ a {
     font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.menu a:hover {
+    color: #92bde7;
+    background: #485e74;
+}
+
+.menu-header {
+    padding: 0;
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: bold;    
+    font-family: cursive, 'Segoe UI', Tahoma, Genveva, Georgia, sans-serif;
+}
+
+
+
+
+
+
+
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {    
     text-align: center;
     font-size: 2.1em;
+    font-weight: bold;
     font-family: georgian, arial, "times new roman";
     margin: 0;
     padding: 0;
@@ -43,249 +90,48 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* Default body */
-body {
-    margin: 0px;
-    padding: 0px;
-    color: rgb(10,10,8);
-}
-
-
-
-
-
-
-
-
-
-
-/* Parent elements */
-.photo {
-    padding: 5px;
-    margin: 0px;
-    display: grid;
-    border: solid 1pt black;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px black;
-    grid-template-columns: 10fr 10fr 10fr;
-    grid-template-rows:auto;
-    grid-gap: 0px;
-    justify-items: stretch;
-    grid-template-areas:
-        "title title title"
-        "desc desc desc";
-}
-
+/* Parent Containers */
 .container {
     display: grid;
-    max-height:80vh;
-    max-width: 90vw;
-    margin: auto;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    justify-items: left;
-}
-
-.form {
-    display: grid;
-    margin: 25px;
-    padding: 25px;
-    background-color: rgb(235,235,190);
-    box-shadow: 5px 5px 8px;
-    border-radius: 5px;
-    /* background: darkgray; */
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "label form . submit";  
-}
-
-.form input {
-    padding: 5px;
-    margin: 0;
-    border: solid 1.2pt darkgray;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
-
-.form i {
-    padding: 0px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1em;
-    margin: 0px;
-    max-height: 2.6em;
-    line-height: 2.6;
-    background: darkgray;
-    /* border: solid 1pt darkcyan;     */
-}
-
- submit-button {
-    grid-area: submit;
-}
-
-.form-parent {
-    display: grid;
-    margin: 20px;
-    padding: 0px;
-    border: solid 1pt darkred;
-    border-radius: 3px;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-row-gap: 0px;
-    grid-column-gap: 0px;
-    justify-items: left;
-    grid-template-areas:
-        "icon input";    
+    grid-template-columns: 10fr 1fr;
+    grid-template-rows: 25% auto;
 }
 
 .row {
-    display: grid;
-    margin:auto;
-    margin:25px;
-    border: solid 1pt darkgray;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px darkgray;
+    display: subgrid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    justify-items: center;
-    grid-template-areas:
-        "header header header header"
-        "main-body main-body main-body main-body"
-        "footer footer footer footer";    
+    /* border: solid 1pt darkblue; */
+    margin: auto;
 }
 
-
-
-
-
-
-
-
-
-
-/* Specific elements */
-.header {
-    margin: 1%;
-    grid-area: header;
-    border: solid 1pt darkred;
-}
-
-.header h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-    position: relative;
-    padding: 5px;
-    margin: 0;
-    font-weight: bold;
-    font-size: 3em;
-}
-
-.body {
-    margin: 1%;
-    grid-area: main-body;
-    border: solid 1pt darkgreen;
-}
-
-.body * {
-    padding: 5px;
-    font-family: cursive, georgia, arialnarrow;
-}
-
-.footer {
-    max-width:90%;
-    margin: 1%;
+.form {
+    display: flex;
+    margin:auto;
     padding: 0;
-    grid-area: footer;
-    border: solid 1pt darkblue;
-    word-wrap: break-word;
 }
 
-.footer p {
-    margin: 0;
-    padding: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-    font-family: cursive, georgia, arialnarrow;
-    font-size: 1em;
-    font-weight: bold;
-    /* text-overflow: ellipsis; */
+.form .icon {
+    /* line-height: 2.6px; */
+    padding: 10px;
+    margin: 0px;
+    border: solid 1pt lightgray;
+    border-right: none;
+    border-bottom-left: 7px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
 
-li.menu-header {
-    font-family: cursive, georgian, garamond;
-    font-size: 1.3em;
-    font-weight: bold;
+.field {
+    /* grid-area: field; */
     padding: 0;
     margin: 0;
-    padding-left: 5px;
-    padding-right: 5px;
+    border-left: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
-
-.title {
-    font-size: 1em;
-    grid-area: title;
-    padding: 2px;
-    font-family: cursive, georgia, georgian, arial;
-    word-wrap: break-word;
-}
-
-.description {
-    grid-area: desc;
-    /* align-self: stretch; */
-    padding: 5px;
-    margin: 2px;
-}
-
-
-
-
-
-/* Element decoration */
-.border {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        ". . header . . "
-        ". . main . ."
-        ". . footer . .";    
-    border: solid 1pt rgb(100, 100, 110);
-}
-
-.menu-header {
-    font-family: cursive;
-    font-size:1em;
-    font-weight: bolder;
-    color: rgb(25,25,55);
-    letter-spacing:0;
-}
-
-.layout {
-    max-height: 80vh;
-}
-
-.copyright {
-    margin: 0;
-    padding: 0;
-    font-size: 0.8em;
-    font-family: arialnarrow;
-    letter-spacing:0em;
-}
-
-.copyright:hover {
-    animation-name: grow;
-    animation-duration: 4s;
-   animation-fill-mode: backwards;
-}
-
-
 
 
 

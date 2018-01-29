@@ -5,11 +5,28 @@ const random = require('../custom_modules/random');
 const photos = require('../custom_modules/photos');
 const csrf = require('csurf');
 const csrfProtection = csrf();
+const firebase = require('firebase-admin');
+
+const serviceAccount = require('../config/galleria.json');
+
+firebase.initializeApp({
+  credential: firebase.credential.cert(serviceAccount),
+  databaseURL: 'https://galleria-89285.firebaseio.com/'
+});
+
+firebase.auth().getUserByEmail(process.env.EMAIL)
+  .then(function(userRecord) {
+    // See the UserRecord reference doc for the contents of userRecord.
+    console.log("Successfully fetched user data:", userRecord.toJSON());
+  })
+  .catch(function(error) {
+    console.log("Error fetching user data:", error);
+  });
+
 router.use(csrfProtection);
 
 // Home view
 router.get('/', (req, res) => {
-    
     res.render('index', {title:'EGA Project'});
 });
 

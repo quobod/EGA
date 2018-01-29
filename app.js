@@ -7,6 +7,9 @@ const session = require('express-session');
 const validator = require('express-validator');
 const flash = require('connect-flash');
 
+// Environment variables
+require('dotenv').config();
+
 // Routes
 var index = require('./routes/index');
 
