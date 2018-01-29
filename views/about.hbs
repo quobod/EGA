@@ -2,9 +2,9 @@
     {{#each photos}}
         <div class="border photo" style="background-image: url({{this.url}}); color: black; margin:4px; border-radius: 9px;"> 
             <h2 class="title">
-                <a class="anchor" href="{{this.url}}" target="_blank">{{this.url}}</a>
+                <a class="anchor" href="{{this.url}}" target="_blank">{{this.title}}</a>
             </h2>
-            <p class="description">{{this.title}}</p>
+            <p class="description">{{this.url}}</p>
         </div>
     {{/each}}
 </div>
