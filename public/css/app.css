@@ -143,10 +143,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post {
-    border: solid 1pt darkblue;
+    border: solid thin darkgray;
     border-radius: 7px;
-    margin: 10px;
+    box-shadow: 5px 5px 10px black;
+    margin: 25px;
     padding: 0px;
+    background: rgba(235, 210, 210, 0.8);
+    color: rgb(80, 80, 85);
 }
 
 .post * {
