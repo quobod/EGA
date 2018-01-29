@@ -17,6 +17,14 @@ body {
 
 
 
+/* Global */
+.border {
+    border: dotted thin black;
+}
+
+
+
+
 
 
 
@@ -103,6 +111,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-rows: auto;
     /* border: solid 1pt darkblue; */
     margin: auto;
+    height: 80vh;
 }
 
 .form {
@@ -132,6 +141,33 @@ h1, h2, h3, h4, h5, h6 {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }
+
+
+
+
+
+
+.photo {
+    margin: 10px;
+}
+
+.photo * {
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.photo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.photo a:hover {
+    text-decoration: underline;
+}
+
+
 
 
 
