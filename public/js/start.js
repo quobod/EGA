@@ -25,7 +25,7 @@ const initApp = () => {
             appendElement(output, parent);
             
             // Add proper attributes
-            addAttribute(parent, 'class', 'row');
+            addAttribute(parent, 'class', 'post');
 
             // Create the header
             let header = createElement('div');

@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     /* border: solid 1pt darkblue; */
-    margin: auto;
+    /* margin: auto; */
     height: 80vh;
 }
 
@@ -142,6 +142,17 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom-left-radius: 0px;
 }
 
+.post {
+    border: solid 1pt darkblue;
+    border-radius: 7px;
+    margin: 10px;
+    padding: 0px;
+}
+
+.post * {
+    padding: 5px;
+    margin: 0px;
+}
 
 
 
