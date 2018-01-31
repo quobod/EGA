@@ -1,10 +1,10 @@
-<div id="output" class="row v-scroll">
+<div id="output" class="container v-scroll">
     {{#each photos}}
-        <div class="border photo" style="background-image: url({{this.url}}); color: black; margin:4px; border-radius: 9px;"> 
-            <h2 class="title">
+        <div class="border album" style="background-image: url({{this.url}}); color: black; margin:4px; border-radius: 9px;"> 
+            <h2 class="top">
                 <a class="anchor" href="{{this.url}}" target="_blank">{{this.title}}</a>
             </h2>
-            <p class="description">{{this.url}}</p>
+            <p class="bottom">{{this.url}}</p>
         </div>
     {{/each}}
 </div>

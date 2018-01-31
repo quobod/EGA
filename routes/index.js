@@ -17,11 +17,12 @@ firebase.initializeApp({
 firebase.auth().getUserByEmail(process.env.EMAIL)
   .then(function(userRecord) {
     // See the UserRecord reference doc for the contents of userRecord.
-    console.log("Successfully fetched user data:", userRecord.toJSON());
+    // console.log("Successfully fetched user data:", userRecord.toJSON());
   })
   .catch(function(error) {
-    console.log("Error fetching user data:", error);
+    // console.log("Error fetching user data:", error);
   });
+
 
 router.use(csrfProtection);
 
